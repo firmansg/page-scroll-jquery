@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Page Scroll Menggunakan jQuery</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header>
+		<h1>Page Scroll Menggunakan jQuery</h1>
+	</header>
+	
+	<nav id="navigation-menu">
+		<ul>
+			<li><a href="#section-1">Halaman 1</a></li>
+			<li><a href="#section-2">Halaman 2</a></li>
+			<li><a href="#section-3">Halaman 3</a></li>
+			<li><a href="#section-4">Halaman 4</a></li>
+			<li><a href="#section-5">Halaman 5</a></li>
+		</ul>
+	</nav>
+	
+	<div id="content">
+		<section id="section-1">
+			<div class="content">
+				<h3>Halaman 1</h3>
+				<p><a href="http://firman.salatigadev.com/12-website-penyedia-gambar-fotografi-gratis/" target="_blank">
+				<img src="http://firman.salatigadev.com/wp-content/uploads/2015/05/freetstock.jpg" alt=""></p>
+				<p><strong>12 Website Penyedia Gambar Fotografi Gratis</a></strong><br>
+				<p>Gambar fotografi yang baik adalah bagian penting dalam menyusun sebuah situs web. Akan tetapi menemukan gambar fotografi untuk digunakan terkadang bisa menjadi sulit. Mungkin Anda akan memilih untuk mengambil foto sendiri, membeli gambar dari sebuah...</p>			
+				<hr /><a href="#top">&uarr; Kembali ke Atas</a> <a href="#" rel="next">&darr; Selanjutnya</a>
+			</div>
+		</section>
+		<section id="section-2">
+			<div class="content">
+				<h3>Halaman 2</h3>
+				<p><a href="http://firman.salatigadev.com/tren-desain-aplikasi-mobile-tahun-2014-bagian-3/" target="_blank">
+				<img src="http://firman.salatigadev.com/wp-content/uploads/2015/05/tren_mobile3.jpg" alt=""></p>
+				<p><strong>Tren Desain Aplikasi Mobile Tahun 2014 Bagian 3</a></strong><br>Blur Bersamaan dengan munculnya tren penggunaan gambar besar diatas penempatan teks dan konten pada aplikasi mobile, muncul juga tren penggunan gambar blur atau buram dan elemen-elemen yang semi transparan. iOS 7 mungkin bisa disebut sebagai...</p>
+				<hr /><a href="#top">&uarr; Kembali ke Atas</a> <a href="#" rel="next">&darr; Selanjutnya</a>
+			</div>
+		</section>
+		<section id="section-3">
+			<div class="content">
+				<h3>Halaman 3</h3>
+				<p><a href="http://firman.salatigadev.com/tren-desain-aplikasi-mobile-tahun-2014-bagian-2/" target="_blank">
+				<img src="http://firman.salatigadev.com/wp-content/uploads/2015/04/trenpost.jpg" alt=""></p>				
+				<p><strong>Tren Desain Aplikasi Mobile Tahun 2014 Bagian 2</a></strong><br>
+				Enterprise Mobile Penggunaan aplikasi Enterprise adalah tren yang kuat di pasar smartphone berteknologi tinggi. Setelah cukup lama tidak ada aplikasi mobile yang didesain untuk produktifitas perusahaan, desainer aplikasi mobile akhirnya menyadari pentingnya hal tersebut dan...</p>				
+				<hr /><a href="#top">&uarr; Kembali ke Atas</a> <a href="#" rel="next">&darr; Selanjutnya</a>
+			</div>
+		</section>
+		<section id="section-4">
+			<div class="content">
+				<h3>Halaman 4</h3>
+				<p><a href="http://firman.salatigadev.com/tren-desain-aplikasi-mobile-tahun-2014-bagian-1/" target="_blank">
+				<img src="http://firman.salatigadev.com/wp-content/uploads/2015/04/app-mobile.jpg" alt=""></p>
+				<p><strong>Tren Desain Aplikasi Mobile Tahun 2014 Bagian 1</a></strong><br>
+				<p>Typography Typography adalah suatu teknik memilih dan menata huruf dengan pengaturan penyebarannya pada ruang yang tersedia, untuk menciptakan kesan tertentu, guna kenyamanan pengguna aplikasi. Sebelumnya banyak desainer yang kurang memperhatikan teknik thypography sehingga pemilihan font...</p>				
+				<hr /><a href="#top">&uarr; Kembali ke Atas</a> <a href="#" rel="next">&darr; Selanjutnya</a>
+			</div>
+		</section>
+		<section id="section-5">
+			<div class="content">
+				<h3>Halaman 5</h3>
+				<p><a href="http://firman.salatigadev.com/membuat-program-hello-android/" target="_blank">
+				<img src="http://firman.salatigadev.com/wp-content/uploads/2015/04/android.jpg" alt=""></p>
+				<p><strong>Membuat Program Hello Android</a></strong><br>
+				<p>Hello Android 1 Kita akan mencoba membuat program pertama kita di Android, seperti belajar pemrograman yang lainnya, program pertama yang wajib dibuat adalah program yang lebih sering dikenal dengan program “Hello World”. Jalankan IDE Eclipse,...</p>
+				<hr /><a href="#top">&uarr; Kembali ke Atas</a>
+		</section>		
+	</div>
+	
+	<footer>
+		<p>Copyright &copy; <a href="http://firman.salatigadev.com">firman.salatigadev.com</a> | Credit jQuery plugin by malihu</p>
+	</footer>
+	
+	<!-- Google CDN jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	<!-- Page Scroll plugin -->
+	<script src="jquery.PageScroll2id.js"></script>
+	
+	<script>
+		(function($){
+			$(window).load(function(){
+				$("#navigation-menu a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
+					highlightSelector:"#navigation-menu a"
+				});
+								
+				$("a[rel='next']").click(function(e){
+					e.preventDefault();
+					var to=$(this).parent().parent("section").next().attr("id");
+					$.mPageScroll2id("scrollTo",to);
+				});				
+			});
+		})(jQuery);
+	</script>
+</body>
+</html>
